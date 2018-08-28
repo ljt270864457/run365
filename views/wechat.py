@@ -21,7 +21,7 @@ def wechat_login():
     :return:
     '''
     body = json.loads(request.data)
-    app_id = app.config['WECHART_ID']
+    app_id = app.config['WECHAT_ID']
     secret = app.config['WECHAT_SECERET_KEY']
     js_code = body.get('login_code')
 
@@ -32,5 +32,4 @@ def wechat_login():
     )
     r = requests.get(url)
     call_back = r.json()
-    print call_back
     return jsonify(call_back)

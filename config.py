@@ -7,7 +7,7 @@
 class BaseConfig(object):
     SECRET_KEY = 'Sm9obiBTY2hyb20ga2lja3MgYXNz'
 
-    WECHART_ID = 'd178ad5d932bedd92f13aaca3b785a42'
+    WECHAT_ID = 'd178ad5d932bedd92f13aaca3b785a42'
     WECHAT_SECERET_KEY = 'd178ad5d932bedd92f13aaca3b785a42'
 
 

@@ -9,6 +9,7 @@ from flask import Flask
 from views.wechat import wechat
 
 app = Flask(__name__, instance_relative_config=True)
+app.config.from_object('config.ProductConfig')
 # 注册蓝图
 app.register_blueprint(wechat)
 
@@ -19,5 +20,4 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    app.config.from_object('config.ProductConfig')
     app.run(host='127.0.0.1', port=9999)
