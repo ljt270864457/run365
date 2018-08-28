@@ -19,6 +19,5 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    app.config.from_envvar('APP_CONFIG_FILE')
-    # app.run(host='127.0.0.1',port='9999',ssl_context='adhoc')
-    app.run(host='127.0.0.1',port='9999')
+    app.config.from_object('config.ProductConfig')
+    app.run(host='127.0.0.1', port=9999)
